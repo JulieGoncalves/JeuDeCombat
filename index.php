@@ -2,24 +2,28 @@
 
 include "attaque.php";
 
-class Player {
+class Player
+{
     private $nom;
     private $vie;
     private $defense;
     private $attaques;
 
-    public function __construct($nom,$vie,$defense,$attaques){
-    $this -> nom = $nom;
-    $this -> vie = $vie;
-    $this -> defense = $defense;
-    $this -> attaques = $attaques;
+    public function __construct($nom, $vie, $defense, $attaques)
+    {
+        $this->nom = $nom;
+        $this->vie = $vie;
+        $this->defense = $defense;
+        $this->attaques = $attaques;
     }
 
-    public function getVie() {
+    public function getVie()
+    {
         return $this->vie;
     }
-  
-    public function attaquer($nom_attaque, $defenseur){
+
+    public function attaquer($nom_attaque, $defenseur)
+    {
         // iterer 
 
         // Récupérer l'attaque au nom passé 
@@ -40,7 +44,7 @@ class Player {
             }
         }
 
-        
+
         // Puis calculer les dégats
         // nouvelleVie = vieInitiale - puissanceAttaque
         // nouvelleVie = vieInitiale + defense -  puissanceAttaque
@@ -48,17 +52,17 @@ class Player {
         $nouvelleVieDuDefenseur = min(0, $vieDefenseur + $defenseur->getDefense() - $puissanceAttaque);
         // Mettre à jour la vie de l'adversaire
         $defense->setVie($nouvelleVieDuDefenseur);
-       
     }
 }
 
 $tabAttaquesJeune = array($crochePied, $coupDeCasquette);
-$tabAttaquesVielle= array($sermon, $coupDeCanne);
+$tabAttaquesVielle = array($sermon, $coupDeCanne);
 
-$leJeune = new player("leJeune",100,10,$tabAttaquesJeune);
+$leJeune = new player("leJeune", 100, 10, $tabAttaquesJeune);
 
-$laVielle = new player("laVielle",100,5,$tabAttaquesVielle);
+$laVielle = new player("laVielle", 100, 5, $tabAttaquesVielle);
 
 
 include "view.php";
+
 ?>
