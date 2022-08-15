@@ -1,0 +1,52 @@
+*{
+    margin :0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url("img/arrière-plan.webp");
+    background-repeat: no-repeat;
+    background-size: 850px;
+}
+
+#laVielle {
+    /* border:1px solid rgb(255, 255, 255); */
+    background-image: url("img/laVielle.png");
+    background-repeat: no-repeat;
+    height: 300px;   
+    width: 100px;
+    position:absolute; left:150px; top:150px;
+    background-size: 80px, 100px; 
+}
+
+#leJeune {
+    /* border:1px solid rgb(255, 255, 255); */
+    background-image: url("img/leJeune.png");
+    background-repeat: no-repeat;
+    height: 300px;   
+    width: 100px;
+    position:absolute; left:600px; top:150px;
+    background-size: 80px, 100px; 
+}
+
+.button {
+
+        background-image: linear-gradient(to right, #DC2424 0%, #4A569D  51%, #DC2424  100%);
+        margin: 10px;
+        padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+      }
+
+      .btn-grad:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+     
